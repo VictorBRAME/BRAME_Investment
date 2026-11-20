@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brame Investment — Inflation Hedging and Index Diversification Portfolio</title>
+<meta name="description" content="A personal portfolio published in full: inflation hedging and diversification away from stock indices. Performance, holdings, movements and vision.">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brame Investment">
+<meta property="og:url" content="https://victorbrame.github.io/BRAME_Investment/">
+<meta property="og:title" content="Inflation Hedging and Index Diversification Portfolio">
+<meta property="og:description" content="A personal portfolio published in full: performance, holdings, movements and vision.">
+<meta property="og:image" content="https://victorbrame.github.io/BRAME_Investment/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Brame Investment">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0f1b2d;--muted:#5a6678;--line:#e2e6ec;--accent:#1b4b7a;--bench:#9aa5b5;--bench2:#b8893a;--pos:#1d6b46;--neg:#a3352b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:72px 24px 48px}
+h1{font:500 2.1rem/1.2 "IBM Plex Serif",Georgia,serif;letter-spacing:-.01em;margin:0 0 20px}
+h2{font:600 1.15rem/1.3 "IBM Plex Sans",system-ui,sans-serif;margin:0 0 16px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:1.1em}
+header h2{margin:28px 0 8px}
+h3{font:600 1rem/1.3 "IBM Plex Sans",system-ui,sans-serif;margin:32px 0 12px}
+.sources{margin-top:32px}
+/* collapsible vision sub-sections */
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line);margin-top:24px}
+summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary h3{margin:0}
+summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--muted)}
+details[open] summary::after{content:"−"}
+details[open]{padding-bottom:8px}
+summary:hover h3{color:var(--accent)}
+li{margin-bottom:6px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{margin-top:64px;padding-top:32px;border-top:1px solid var(--line)}
+.logo{display:block;width:260px;max-width:80%;height:auto;margin:0 0 36px}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.asof{margin-top:-8px}
+.note{margin-top:14px}
+.pos{color:var(--pos)}
+.neg{color:var(--neg)}
+/* indicators */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:24px 20px;margin:0 0 32px}
+.kpis dt{color:var(--muted);font-size:.85rem}
+.kpis dd{margin:2px 0 0;font:500 1.5rem/1.2 "IBM Plex Sans",sans-serif;font-variant-numeric:tabular-nums}
+.kpis dd small{display:block;margin-top:2px;font-size:.8rem;font-weight:400;color:var(--muted)}
+.chart{position:relative;height:320px}
+/* filter buttons */
+.filters{display:flex;gap:8px;margin-bottom:16px}
+.filters.periods{margin-bottom:24px}
+.filters button{font:inherit;font-size:.9rem;background:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 14px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+/* tables */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem;font-variant-numeric:tabular-nums}
+th{text-align:left;font-weight:500;color:var(--muted);font-size:.85rem;border-bottom:1px solid var(--ink);padding:0 14px 8px 0;white-space:nowrap}
+td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th.num,td.num{text-align:right}
+td.w{white-space:nowrap}
+.bar{display:inline-block;width:56px;height:6px;background:var(--line);border-radius:3px;margin-right:10px;vertical-align:middle;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.buy{color:var(--pos);font-weight:600}
+.sell{color:var(--neg);font-weight:600}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer p{margin:0 0 10px}
+@media (max-width:520px){main{padding-top:48px}h1{font-size:1.7rem}}
+@media print{.filters{display:none}main{padding:0;max-width:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="logo" src="logo.png" alt="Brame Investment" width="260">
+    <h1>Inflation Hedging and<br>Index Diversification Portfolio</h1>
+    <p class="muted small" id="meta"></p>
+    <h2>About me</h2>
+    <p>My name is Victor BRAME. I work in finance and previously worked in asset management at Rothschild &amp; Co. I have been investing in the financial markets for years, and I have decided to share a fraction of what I do.</p>
+    <h2>The portfolio</h2>
+    <p>This portfolio is part of my personal savings and serves as a diversification strategy. It has two objectives:</p>
+    <ol>
+      <li><strong>Hedging against inflation</strong>, by selecting companies expected to benefit from high and persistent inflation.</li>
+      <li><strong>Diversifying away from stock indices.</strong> Indices have become very expensive and highly concentrated in a few technology stocks, driven by growth and momentum. This is why value criteria are applied to the stocks I select. The strategy therefore diversifies away from indices in two ways: it has no exposure to the mega-caps that dominate them, and its value criteria are the opposite of the growth orientation that drives most of the indices.</li>
+    </ol>
+  </header>
+
+  <section id="performance" aria-labelledby="t-perf">
+    <h2 id="t-perf">Performance</h2>
+    <div class="filters periods" role="group" aria-label="Select period">
+      <button type="button" data-r="1m" aria-pressed="false">1M</button>
+      <button type="button" data-r="3m" aria-pressed="false">3M</button>
+      <button type="button" data-r="ytd" aria-pressed="false">YTD</button>
+      <button type="button" data-r="1y" aria-pressed="false">1Y</button>
+      <button type="button" data-r="all" aria-pressed="true">All</button>
+    </div>
+    <dl class="kpis" id="kpis"></dl>
+    <div class="chart"><canvas id="chart" role="img" aria-label="Cumulative return of the portfolio compared with its benchmark"></canvas></div>
+    <p class="muted small note" id="perf-note"></p>
+  </section>
+
+  <section id="holdings" aria-labelledby="t-hold">
+    <h2 id="t-hold">Current portfolio</h2>
+    <dl class="kpis" id="hstats"></dl>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Security</th><th>Exchange</th><th>Currency</th><th class="num">Weight</th><th class="num">Avg. cost</th><th class="num">Price</th><th class="num">Return</th></tr></thead>
+        <tbody id="hold-body"></tbody>
+      </table>
+    </div>
+    <p class="muted small note" id="hold-note"></p>
+  </section>
+
+  <section id="movements" aria-labelledby="t-mv">
+    <h2 id="t-mv">Movements</h2>
+    <div class="filters" id="mv-filters" role="group" aria-label="Filter movements">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="Buy" aria-pressed="false">Buys</button>
+      <button type="button" data-f="Sell" aria-pressed="false">Sells</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Security</th><th>Action</th><th class="num">Price</th></tr></thead>
+        <tbody id="mv-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="vision" aria-labelledby="t-vision">
+    <h2 id="t-vision">My vision</h2>
+    <p class="muted small asof">As of Nov 2, 2026</p>
+    <p><strong>Thesis.</strong> I expect high inflation over the coming years, well above central banks' 2% targets. Two forces drive it, and monetary policy struggles to offset either of them: an inelastic energy supply and high public debt. Both have clear historical precedents, and in both cases real assets with pricing power, led by energy, were among the few to preserve purchasing power.</p>
+
+    <details>
+    <summary><h3>1. Energy supply cannot respond to demand</h3></summary>
+    <p><strong>Fossil fuels still dominate the energy mix.</strong> They supply 86% of global primary energy: oil 33%, coal 28%, natural gas 25% (Energy Institute, <em>Statistical Review of World Energy</em>). The transition adds capacity, but it has not yet displaced hydrocarbons in absolute terms.</p>
+    <p><strong>Oil fields deplete, and producers have underinvested.</strong></p>
+    <ul>
+      <li><strong>Output falls every year once a field passes its peak.</strong> Reservoir pressure drops and production declines: on average by 5.6% a year for conventional oil fields after their peak. Shale wells decline much faster: without new drilling, tight oil output would fall by more than 35% in one year.</li>
+      <li><strong>Most investment now only offsets that decline.</strong> Nearly 90% of upstream oil and gas investment since 2019 has gone into compensating for this natural decline rather than adding supply. Without new investment, global oil production would fall by about 5.5 million barrels per day each year, roughly 8% of supply, or the combined output of Brazil and Norway (IEA, 2025).</li>
+      <li><strong>Investment has fallen while the need has grown.</strong> Upstream investment, just under $570bn in 2025 and falling again, remains well below its mid-2010s level. After the 2014–2016 and 2020 downturns, producers moved from volume growth to capital discipline. Even if producers decided to reinvest heavily in new production sites, new conventional projects take five to ten years to reach first oil.</li>
+    </ul>
+    <p><strong>An inelastic supply turns disruptions into price shocks, and price shocks into inflation.</strong></p>
+    <ul>
+      <li><strong>1973.</strong> The Arab oil embargo roughly quadrupled the price of crude within months. US CPI peaked at 12.3% in December 1974.</li>
+      <li><strong>1979.</strong> The Iranian revolution more than doubled oil prices again. US CPI reached 14.8% in March 1980.</li>
+      <li><strong>2022.</strong> After the invasion of Ukraine, Brent briefly traded near $139. US CPI peaked at 9.1% in June 2022, and euro area inflation at 10.6% in October.</li>
+    </ul>
+    <p><strong>The current Middle East war follows the same pattern.</strong></p>
+    <ul>
+      <li>In March 2026, IEA members agreed to release 400 million barrels from emergency stocks. It was the largest coordinated release in the agency's history, more than double the 2022 release.</li>
+      <li>Reserves are finite and must be refilled. After 2022, the US Strategic Petroleum Reserve fell to its lowest level since 1983, and refilling it added years of demand.</li>
+      <li><strong>Refining capacity is also under attack.</strong> Outages at Gulf refineries and repeated drone strikes on Russian refineries have tightened the market for refined products. By November 2026, about 30% of Russian refining capacity was disrupted. Diesel and jet fuel feed directly into transport, freight and food costs, so a shortage of refined products spreads to consumer prices faster and more broadly than a rise in crude alone.</li>
+    </ul>
+    </details>
+
+    <details>
+    <summary><h3>2. Public debt creates an incentive to tolerate inflation</h3></summary>
+    <p><strong>Debt levels are at historic highs.</strong></p>
+    <ul>
+      <li>US federal debt held by the public is about 101% of GDP. The CBO projects it will exceed its 1946 record of 106% by 2030 and reach 120% by 2036.</li>
+      <li>Global public debt was close to 94% of GDP in 2025, and the IMF projects 100% by 2029.</li>
+    </ul>
+    <p><strong>The historical exit is financial repression.</strong> Between 1946 and 1974, US federal debt held by the public fell from 106% to about 23% of GDP, mostly through growth and negative real interest rates rather than budget surpluses. Real rates were negative roughly half the time in advanced economies between 1945 and 1980. Reinhart and Sbrancia estimate that this "liquidation effect" reduced US and UK debt by about 2 to 4% of GDP per year.</p>
+    <p><strong>Higher policy rates have little effect on energy-driven inflation.</strong> A rate hike cannot add a barrel of supply. It reduces inflation only by reducing demand, through a slowdown or a recession.</p>
+    <ul>
+      <li>In July 2008, the ECB raised its rate to 4.25% while inflation was driven by oil, even though inflation excluding energy and food was below 2%. It had to cut rates from October onwards.</li>
+      <li>In 2011, it raised rates twice more during an energy-led rise in prices, and again reversed both hikes before the end of the year.</li>
+      <li>When Volcker did bring inflation down in 1979–1982, it took two recessions. With public debt above 100% of GDP, that cost is now much harder to accept.</li>
+    </ul>
+    <p><strong>Even high nominal rates may not protect savers.</strong> The US 10-year Treasury yield is close to 5% (early November 2026). That is high by the standards of the last fifteen years, but it is only a positive real return if inflation stays below it. At 5% inflation, money loses about 40% of its purchasing power in ten years. Investments must therefore target high returns to keep generating positive real returns, even in periods of high inflation. This is why this portfolio is designed to generate positive real returns in an inflationary environment, by selecting companies that benefit from high and persistent inflation.</p>
+    </details>
+
+    <details>
+    <summary><h3>3. Why energy equities</h3></summary>
+    <p><strong>History supports them.</strong></p>
+    <ul>
+      <li>In the 1970s, energy was the best-performing sector. Its weight in the S&amp;P 500 rose to about 28% by 1980.</li>
+      <li>In 2022, the S&amp;P 500 Energy sector returned +65.7%, while the S&amp;P 500 lost 18.1%.</li>
+      <li>Across US inflationary regimes, Neville et al. (2021) find that commodities delivered a real return of about 14% a year, while a 60/40 equity-bond portfolio lost about 6% a year in real terms.</li>
+    </ul>
+    <p><strong>Indices are underexposed.</strong></p>
+    <ul>
+      <li>Energy represents less than 4% of the S&amp;P 500 today. An index investor holds almost no direct hedge against the scenario described above.</li>
+      <li>Stocks and bonds also tend to fall together when inflation is high, as in 2022. In that environment, the traditional 60/40 diversification breaks down.</li>
+    </ul>
+    <p><strong>Why equities rather than commodity futures.</strong> Producers capture high commodity prices through their cash flows and return them through dividends and buybacks. They avoid the roll cost of futures curves in contango, and they keep upside to their reserves and production growth.</p>
+    </details>
+
+    <details>
+    <summary><h3>4. Why value criteria within energy</h3></summary>
+    <p><strong>Market valuations are stretched.</strong></p>
+    <ul>
+      <li>The S&amp;P 500's Shiller CAPE is close to 40, a level exceeded only at the peak of the dot-com bubble (44 in 1999–2000).</li>
+      <li>The ten largest companies account for about 39% of the index, compared with about 24% in 2017. Most of them are long-duration growth stocks.</li>
+    </ul>
+    <p><strong>Duration matters when inflation rises.</strong> Higher inflation raises discount rates, and the valuation of long-duration growth stocks falls the most. In 2022, the Russell 1000 Growth lost 29.1% and the Russell 1000 Value 7.5%.</p>
+    <p><strong>Value is the margin of safety if the thesis is wrong.</strong> I assess companies on a combination of the following criteria; not every holding meets all of them:</p>
+    <ul>
+      <li><strong>Valuation multiples:</strong> EV/EBITDA, EV/Sales, P/E and price to tangible book value.</li>
+      <li><strong>Cash generation:</strong> a high free cash flow yield at conservative oil and gas prices.</li>
+      <li><strong>Balance sheet:</strong> low net debt relative to EBITDA.</li>
+      <li><strong>Resilience:</strong> a low breakeven price.</li>
+    </ul>
+    <p>This often leads to small and mid-cap producers and international listings, where valuations are lower because analyst coverage and liquidity are lower.</p>
+    </details>
+
+    <details>
+    <summary><h3>5. Risks to the thesis</h3></summary>
+    <ul>
+      <li><strong>A demand shock or recession</strong>, which would lower energy prices and inflation at the same time.</li>
+      <li><strong>OPEC+ spare capacity</strong> returning faster than expected, or a lasting resolution of the Middle East conflict.</li>
+      <li><strong>Central banks accepting a deep recession</strong> to restore 2% inflation, as in 1980–1982.</li>
+      <li><strong>A faster energy transition</strong> compressing the long-term valuations of fossil fuel producers.</li>
+      <li><strong>Fiscal and regulatory risk:</strong> windfall taxes such as the UK Energy Profits Levy, plus political and currency risk on international listings.</li>
+    </ul>
+    <p>The value criteria are designed to limit the damage in these scenarios: low valuations, low debt and low breakeven prices leave a margin of safety if energy prices fall.</p>
+    </details>
+
+    <p class="muted small sources">Sources: Energy Institute, <em>Statistical Review of World Energy</em>; IEA, <em>The Implications of Oil and Gas Field Decline Rates</em> (2025), <em>World Energy Investment 2025</em> and emergency stock release (March 2026); US BLS; Eurostat; CBO, <em>The Budget and Economic Outlook: 2026 to 2036</em>; IMF, <em>Fiscal Monitor</em> (April 2026); Reinhart &amp; Sbrancia, "The Liquidation of Government Debt" (BIS Working Paper 363); Neville, Draaisma, Funnell, Harvey &amp; Van Hemert, "The Best Strategies for Inflationary Times" (2021); S&amp;P Dow Jones Indices; FTSE Russell; US Treasury.</p>
+  </section>
+
+  <footer>
+    <p><strong>Important information</strong></p>
+    <p>This site presents a personal portfolio held by its author, an individual investor, not a licensed adviser. It is published for information only. It is not investment advice, a recommendation, an offer or a solicitation to buy or sell any security, and it does not take into account anyone's personal situation. The views expressed are personal and do not represent those of any current or former employer.</p>
+    <p><strong>Conflicts of interest.</strong> The author holds all positions shown and may buy or sell them at any time without notice. Trades and positions are published automatically on the day following execution, never before, subject to connection issues with the broker or other technical problems that may delay an update. The author receives no compensation from any company, broker or fund mentioned.</p>
+    <p><strong>Risks.</strong> The portfolio is concentrated in a small number of stocks, and some of the companies it invests in may be less liquid. Their prices can move sharply and you may lose a large part of the capital invested. Performance is shown in USD while some holdings are quoted in other currencies, so exchange rates affect the results.</p>
+    <p><strong>Performance.</strong> The track record started on Nov 2, 2026 and is too short to be meaningful. Past performance does not guarantee future results. Following this portfolio will not necessarily produce the same results, because of timing, fees, taxes and currency effects.</p>
+    <p>Make your own decisions, and consult a licensed adviser if needed.</p>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const nf = (v, d = 1) => Math.abs(v).toLocaleString("en-CA", {minimumFractionDigits: d, maximumFractionDigits: d});
+const pct = (v, d = 1) => (v < 0 ? "−" : "+") + nf(v, d) + "%";
+const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-CA", {day: "numeric", month: "short", year: "numeric"});
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+
+function stats(series, key) {
+  const idx = series.map(p => 1 + p[key] / 100), n = idx.length;
+  const days = (new Date(series[n - 1].date) - new Date(series[0].date)) / 864e5;
+  const rets = idx.slice(1).map((v, i) => v / idx[i] - 1);
+  const mean = rets.reduce((a, b) => a + b, 0) / rets.length;
+  const sd = Math.sqrt(rets.reduce((a, b) => a + (b - mean) ** 2, 0) / (rets.length - 1));
+  const perYear = (n - 1) / (days / 365.25);
+  let peak = idx[0], mdd = 0;
+  idx.forEach(v => { peak = Math.max(peak, v); mdd = Math.min(mdd, v / peak - 1); });
+  return {
+    total: series[n - 1][key],
+    annual: days >= 365 ? (idx[n - 1] ** (365 / days) - 1) * 100 : null,
+    vol: sd * Math.sqrt(perYear) * 100,
+    mdd: mdd * 100
+  };
+}
+
+const kpi = (l, v, s) => `<div><dt>${l}</dt><dd>${v}${s ? `<small>${s}</small>` : ""}</dd></div>`;
+let perf, chart, range = "all";
+function startIdx(r) {
+  const s = perf.series, last = new Date(s[s.length - 1].date);
+  if (r === "all") return 0;
+  const from = r === "ytd" ? new Date(last.getFullYear(), 0, 1) : new Date(last - {"1m": 30, "3m": 91, "1y": 365}[r] * 864e5);
+  let i = 0; s.forEach((x, k) => { if (new Date(x.date) <= from) i = k; });
+  return i;
+}
+function rebase(s, i) {
+  const a = 1 + s[i].portfolio / 100, b = 1 + s[i].benchmark / 100, c = 1 + (s[i].benchmark2 ?? 0) / 100;
+  return s.slice(i).map(x => ({date: x.date, portfolio: ((1 + x.portfolio / 100) / a - 1) * 100,
+    benchmark: ((1 + x.benchmark / 100) / b - 1) * 100, benchmark2: ((1 + (x.benchmark2 ?? 0) / 100) / c - 1) * 100}));
+}
+function drawPerf() {
+  let s = rebase(perf.series, startIdx(range));
+  if (s.length < 3) s = perf.series;
+  const two = !!perf.benchmark2, n1 = esc(perf.benchmark), n2 = esc(perf.benchmark2 || "");
+  const p = stats(s, "portfolio"), b = stats(s, "benchmark"), c = two ? stats(s, "benchmark2") : null;
+  const sub = f => `${n1}: ${f(b)}` + (two ? `<br>${n2}: ${f(c)}` : "");
+  const gap = v => (v < 0 ? "−" : "+") + nf(v) + " pts";
+  $("#kpis").innerHTML =
+    kpi("Cumulative return", pct(p.total), sub(x => pct(x.total))) +
+    kpi("Annualized return", p.annual === null ? "—" : pct(p.annual), b.annual === null ? "" : sub(x => pct(x.annual))) +
+    kpi("Annualized volatility", nf(p.vol) + "%", sub(x => nf(x.vol) + "%")) +
+    kpi("Maximum drawdown", pct(p.mdd), sub(x => pct(x.mdd))) +
+    kpi(`Gap vs ${n1}`, gap(p.total - b.total), "") +
+    (two ? kpi(`Gap vs ${n2}`, gap(p.total - c.total), "") : "");
+  const sets = [["Portfolio", "portfolio", "--accent", 2.5], [perf.benchmark, "benchmark", "--bench", 1.8]];
+  if (two) sets.push([perf.benchmark2, "benchmark2", "--bench2", 1.8]);
+  const css = getComputedStyle(document.documentElement), v = n => css.getPropertyValue(n);
+  const labels = s.map(x => x.date);
+  const ds = sets.map(([label, key, col, w]) => ({label, data: s.map(x => x[key]), borderColor: v(col), borderWidth: w, pointRadius: 0, tension: 0}));
+  if (chart) {
+    chart.data.labels = labels; chart.data.datasets = ds; chart.update();
+  } else {
+    chart = new Chart($("#chart"), {
+      type: "line",
+      data: {labels, datasets: ds},
+      options: {
+        responsive: true, maintainAspectRatio: false, animation: false,
+        interaction: {mode: "index", intersect: false}, font: {family: "IBM Plex Sans"},
+        plugins: {legend: {align: "start", labels: {boxWidth: 12, boxHeight: 2, color: v("--ink")}},
+          tooltip: {callbacks: {title: i => fmtDate(i[0].label), label: k => `${k.dataset.label}: ${pct(k.parsed.y)}`}}},
+        scales: {
+          x: {grid: {display: false}, ticks: {maxTicksLimit: 6, color: v("--muted"), callback(t) { return fmtDate(this.getLabelForValue(t)); }}},
+          y: {grid: {color: v("--line")}, border: {display: false}, ticks: {color: v("--muted"), callback: t => t + "%"}}}}
+    });
+  }
+  $("#perf-note").textContent = `Cumulative return since ${fmtDate(s[0].date)}, based on daily closes. Benchmark${two ? "s" : ""}: ${perf.benchmark}${two ? " and " + perf.benchmark2 : ""}.`;
+}
+function renderPerf(p) {
+  perf = p;
+  $("#meta").textContent = `Tracking since ${fmtDate(p.series[0].date)}. Last updated ${fmtDate(p.updated)}.`;
+  if (p.series.length < 5) {
+    document.querySelector(".chart").style.display = "none";
+    document.querySelector(".periods").style.display = "none";
+    $("#kpis").innerHTML = "";
+    $("#perf-note").textContent = `Tracking started on ${fmtDate(p.series[0].date)}. The chart and indicators will appear after a few trading days.`;
+    return;
+  }
+  drawPerf();
+}
+document.querySelectorAll(".periods button").forEach(btn => btn.addEventListener("click", () => {
+  range = btn.dataset.r;
+  document.querySelectorAll(".periods button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  if (perf) drawPerf();
+}));
+
+function renderHoldings(h) {
+  if (!h.positions.length) {
+    $("#hstats").innerHTML = "";
+    $("#hold-body").innerHTML = `<tr><td colspan="7" class="muted">No positions yet.</td></tr>`;
+    $("#hold-note").textContent = "";
+    return;
+  }
+  const P = h.positions, max = Math.max(...P.map(p => p.weight)), top3 = P.slice(0, 3).reduce((a, p) => a + p.weight, 0);
+  $("#hstats").innerHTML = kpi("Positions", P.length, "") + kpi("Top 3 weight", nf(top3) + "%", "") + kpi("Cash", nf(h.cash) + "%", "");
+  $("#hold-body").innerHTML = P.map(p => `<tr>
+    <td><strong>${esc(p.ticker)}</strong><br><span class="muted small">${esc(p.name)}${p.isin ? `<br>${esc(p.isin)}` : ""}</span></td>
+    <td>${esc(p.exchange)}</td><td>${esc(p.currency)}</td>
+    <td class="w num"><span class="bar"><i style="width:${(p.weight / max * 100).toFixed(0)}%"></i></span>${nf(p.weight)}%</td>
+    <td class="num">${nf(p.avg_cost, 2)}</td><td class="num">${nf(p.price, 2)}</td>
+    <td class="num ${p.return_pct >= 0 ? "pos" : "neg"}">${pct(p.return_pct)}</td></tr>`).join("") +
+    `<tr><td><strong>Cash</strong></td><td></td><td></td><td class="w num">${nf(h.cash)}%</td><td></td><td></td><td></td></tr>`;
+  $("#hold-note").textContent = `As of ${fmtDate(h.updated)}. Weights are a percentage of net asset value. Return is the unrealized price return in each security’s own currency and excludes currency effects.`;
+}
+
+let mv = [], filter = "all";
+function renderMv() {
+  const rows = mv.filter(m => filter === "all" || m.action === filter).sort((a, b) => b.date.localeCompare(a.date));
+  $("#mv-body").innerHTML = rows.length ? rows.map(m => `<tr>
+    <td>${fmtDate(m.date)}</td>
+    <td><strong>${esc(m.ticker)}</strong><br><span class="muted small">${esc(m.name)}</span></td>
+    <td class="${m.action === "Buy" ? "buy" : "sell"}">${esc(m.action)}</td>
+    <td class="num">${nf(m.price, 2)} ${esc(m.currency)}</td></tr>`).join("")
+    : `<tr><td colspan="4" class="muted">No movements for this filter.</td></tr>`;
+}
+document.querySelectorAll("#mv-filters button").forEach(btn => btn.addEventListener("click", () => {
+  filter = btn.dataset.f;
+  document.querySelectorAll("#mv-filters button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  renderMv();
+}));
+
+fetch("performance.json").then(r => r.json()).then(renderPerf)
+  .catch(e => { console.error(e); $("#kpis").textContent = "Performance data is currently unavailable."; });
+fetch("holdings.json").then(r => r.json()).then(renderHoldings)
+  .catch(e => { console.error(e); $("#hold-body").innerHTML = `<tr><td colspan="7" class="muted">Holdings are currently unavailable.</td></tr>`; });
+fetch("movements.json").then(r => r.json()).then(d => { mv = d; renderMv(); })
+  .catch(e => { console.error(e); $("#mv-body").innerHTML = `<tr><td colspan="4" class="muted">Movements are currently unavailable.</td></tr>`; });
+</script>
+</body>
+</html>

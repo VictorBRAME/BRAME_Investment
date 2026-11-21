@@ -1,18 +1,51 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "base": "USD",
- "cash": 36.93,
+ "cash": 7.28,
  "positions": [
+  {
+   "ticker": "VK",
+   "name": "Vallourec SA",
+   "isin": "FR0013506730",
+   "exchange": "SBF",
+   "currency": "EUR",
+   "weight": 15.0,
+   "avg_cost": 18.6703,
+   "price": 15.475,
+   "return_pct": -17.11
+  },
   {
    "ticker": "SER",
    "name": "Serica Energy PLC",
    "isin": "GB00B0CY5V57",
    "exchange": "LSE",
    "currency": "GBP",
-   "weight": 15.08,
+   "weight": 14.93,
    "avg_cost": 2.2153,
-   "price": 2.166,
-   "return_pct": -2.23
+   "price": 2.066,
+   "return_pct": -6.74
+  },
+  {
+   "ticker": "RE4",
+   "name": "Geo Energy Resources LTD",
+   "isin": "SG2F24986083",
+   "exchange": "SGX",
+   "currency": "SGD",
+   "weight": 14.0,
+   "avg_cost": 0.4566,
+   "price": 0.46,
+   "return_pct": 0.75
+  },
+  {
+   "ticker": "QES",
+   "name": "China Sunsine Chemical Hldgs",
+   "isin": "SGXE54479022",
+   "exchange": "SGX",
+   "currency": "SGD",
+   "weight": 12.77,
+   "avg_cost": 0.6073,
+   "price": 0.61,
+   "return_pct": 0.45
   },
   {
    "ticker": "MAU",
@@ -20,21 +53,10 @@
    "isin": "FR0000051070",
    "exchange": "SBF",
    "currency": "EUR",
-   "weight": 12.41,
+   "weight": 12.44,
    "avg_cost": 7.0323,
-   "price": 6.745,
-   "return_pct": -4.08
-  },
-  {
-   "ticker": "VK",
-   "name": "Vallourec SA",
-   "isin": "FR0013506730",
-   "exchange": "SBF",
-   "currency": "EUR",
-   "weight": 12.21,
-   "avg_cost": 19.5204,
-   "price": 18.115,
-   "return_pct": -7.2
+   "price": 6.505,
+   "return_pct": -7.5
   },
   {
    "ticker": "ENOG",
@@ -42,10 +64,10 @@
    "isin": "GB00BG12Y042",
    "exchange": "LSE",
    "currency": "GBP",
-   "weight": 12.2,
+   "weight": 12.03,
    "avg_cost": 7.085,
-   "price": 6.575,
-   "return_pct": -7.2
+   "price": 6.24,
+   "return_pct": -11.93
   },
   {
    "ticker": "EC",
@@ -53,10 +75,10 @@
    "isin": "GA0000121459",
    "exchange": "SBF",
    "currency": "EUR",
-   "weight": 11.17,
+   "weight": 11.55,
    "avg_cost": 229.5,
-   "price": 215.5,
-   "return_pct": -6.1
+   "price": 214.5,
+   "return_pct": -6.54
   }
  ]
 }

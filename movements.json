@@ -38,5 +38,29 @@
   "action": "Buy",
   "price": 19.405,
   "currency": "EUR"
+ },
+ {
+  "date": "2026-11-20",
+  "ticker": "QES",
+  "name": "China Sunsine Chemical Hldgs",
+  "action": "Buy",
+  "price": 0.605,
+  "currency": "SGD"
+ },
+ {
+  "date": "2026-11-20",
+  "ticker": "RE4",
+  "name": "Geo Energy Resources LTD",
+  "action": "Buy",
+  "price": 0.455,
+  "currency": "SGD"
+ },
+ {
+  "date": "2026-11-20",
+  "ticker": "VK",
+  "name": "Vallourec SA",
+  "action": "Buy",
+  "price": 16.16,
+  "currency": "EUR"
  }
 ]
